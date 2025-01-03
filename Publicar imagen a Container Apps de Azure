@@ -1,0 +1,109 @@
+########################################################################################################################
+¿Cómo se despliega una imagen de contenedor en Azure?
+Desplegar una imagen de contenedor en Azure puede parecer una tarea complicada al principio, pero con los pasos adecuados, se convierte en un proceso bastante llevadero que maximiza el uso de su infraestructura en la nube. Azure ofrece la flexibilidad necesaria para manejar estas actividades de manera eficiente, asegurando la integridad y accesibilidad de tus aplicaciones.
+
+¿Cómo se prepara el registro de contenedores en Azure?
+Para empezar, una de las primeras acciones es seleccionar el registro de contenedores en Azure y activar el acceso de usuario administrador. Esto es crucial para permitir que las aplicaciones de contenedor puedan interactuar con el registro sin problemas. Aquí están los pasos básicos:
+
+Inicie sesión en el portal de Azure.
+Seleccione su registro de contenedores.
+Acceda a la sección de configuración (settings).
+Seleccione 'llaves de acceso'.
+Habilite el acceso de usuario administrador.
+¿Cuál es el proceso para crear una container app?
+Una vez que el registro de contenedores esté preparado, el siguiente paso es crear la aplicación de contenedor en el portal de Azure. Esto incluye establecer los principales parámetros de configuración que el sistema requiere:
+
+Grupo de recursos: Seleccione el grupo de recursos que se utilizará, por ejemplo, "contenedores Platzi".
+Nombre del contenedor: Asigne un nombre apropiado a su container app, como "sitio web Amin".
+Despliegue desde una imagen: Elija desplegar la aplicación desde una imagen en lugar de un artefacto o código fuente.
+Creación de un nuevo ambiente de trabajo: Seleccione "crear uno nuevo" si desea un nuevo entorno de trabajo para container apps.
+¿Cómo se configura la imagen del contenedor?
+Para configurar adecuadamente la imagen del contenedor, siga estos pasos:
+
+Seleccionar origen de imagen: Podría ser desde Azure Container Registry o Docker Hub.
+Suscripción y registro: Asegúrese de seleccionar su suscripción y el registro correcto donde está publicada la imagen, por ejemplo, el registro creado llamado "Platzi".
+Imagen y TAG: Seleccione la imagen deseada, como "sitio web", y el TAG especificado, como "Latest".
+Configurar Ingress: Habilite "Ingress" y configure para aceptar tráfico desde todas las ubicaciones, habilitando la conectividad necesaria.
+¿Qué ocurre después del despliegue en Azure?
+Una vez que ha completado el proceso de configuración y creación, Azure procederá con el despliegue de la instancia de su container app. Recibirá notificaciones de Azure, y podrá acceder al recurso desplegado.
+
+Acceda a la URL de la aplicación publicada.
+Puede expandir la sección de aplicación para verificar detalles del contenedor.
+Recuerde que aunque las imágenes están en un registro privado, al desplegarlas en una container app, se vuelven accesibles públicamente.
+Finalmente, es fundamental controlar el acceso y asegurar que sólo las personas autorizadas puedan ver o modificar la aplicación según los propósitos del negocio. A medida que el despliegue de contenedores se vuelve más común, estos procedimientos se convierten en habilidades esenciales para desarrolladores y administradores de sistemas.
+########################################################################################################################
+
+########################################################################################################################
+Dentro de Azure
+########################################################################################################################
+Cloud Azure 
+Grupo de recursos: (Esto puede ser toda el area de trabajo para la infra que se requiera para los poryectos)
+Home --> Resource groups
+	+ Create		(PAra crear un registry y subir la imagen de docker en azure)
+		Buscar en la lupa: Container registry
+			Container Registry  (Microsft Azure Service)    
+				Se seleciona , se da la opcion de Create (en Plan debe tener Container Registry)
+					Se muestran las caracteristicas
+						Project details
+						Subcription : Azure Corp Account
+							Resource group : (Nombre del contenedor)
+						Instance details
+						Registry name : (nombre del registry)
+						Location : East US 2
+						Pricing plan : Standar
+						
+						click en Review + Create 
+							PAra validar que todo este correcto
+						Selecionar Create
+
+Una vez creado, se selecciona [Go to resource]						
+							Al seleccionar en la pestaña [Overview]
+							Seleciccionar [Services]
+								[Repositories]
+									En este punto es donde se debe de subir o estar(en caso de una existente o validar la que se sube) la imagen de docker
+
+			Para subir la imagen a azure:
+				En la opcion de Overview (vista general en español)
+				Se copia la parte de [Login server] la descripcion sin el xxxx.azurecr.io
+				
+				Una vez copiada la descripcion:
+					Se mueve a la terminal y se teclea 
+						az acr login -n <nombre de registro>  
+						<nombre de registro> = la descripcion sin el xxxx.azurecr.io
+						
+				Pociocionarce en la carpeta que contiene el dockerfile
+				una vez estando en la carpeta, se genera el>
+					docker build -t xxxx.azurecr.io/<nombre imagen>:<tag> .
+								ejemplo: xxxx.azurecr.io/sitioweb:1.0.0
+								
+					docker images --> para ver la imagen
+					docker push xxxx.azurecr.io/<nombre imagen>:<tag>
+						-> se sube al registry de azure
+
+Publicar imagen en container apps de Azure:
+	En el portal de Azure, entrar al contenedor 
+		[Overview] --> [Settings] --> [Access Keys] 
+			--> Habilitar Admin user [O], se regresa a [groups resource]
+				--> [+ Create] --> [Buscar [Container app], seleccionar la primera]
+					--> Plan: Container App : [Create]
+						--> Seleccionar [Resource Group[] : El conenedor [creado]
+						--> Conyainer app name : <colocar  nombre>
+						--> Containers Apps Environment : 
+							--> Create New
+								--> Environment nmae: <nombre>
+								--> Create
+						--> Next : Container
+							--> Name : <nombre>
+							--> Imagen source : Azure Container Registry
+							--> Registry : <xxxx.azurecr.io>
+							--> Imagen  : <Seleccionar imagen>
+							--> Imagen tag : <Seleccionar tag>
+							
+						--> Next:Ingress	
+							--> Ingress : [Enabled] habilitar
+							--> Accepting traffic from anywhere
+							--> Next : tags>
+						--> [ Next : Review + create > ]
+						--> [Create]
+						--> [Go to resource]
+########################################################################################################################
