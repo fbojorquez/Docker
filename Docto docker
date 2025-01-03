@@ -1,5 +1,5 @@
 ###################################################################################################################
-
+Desbloqueando el Poder de Docker
 ###################################################################################################################
 ¿Cómo hemos utilizado Docker hasta ahora?
 El aprendizaje de Docker ha recorrido un camino fascinante, lleno de nuevos comandos y posibilidades. Hasta este punto, hemos aprendido comandos esenciales como Build, Push y Docker images, lo que nos ha permitido crear y gestionar nuestras imágenes, así como iniciar contenedores a partir de estas imágenes cuidadosamente construidas.
@@ -26,7 +26,7 @@ Adaptabilidad: La capacidad de desplegar imágenes en diferentes plataformas en 
 Estas son las bases que nos permitirán manejar nuestras aplicaciones de manera más eficiente y profesional en el mundo real.
 
 ###################################################################################################################
-
+Construcción de Imágenes Multi-stage
 ###################################################################################################################
 ¿Cómo crear imágenes de Docker eficientes?
 Crear imágenes de Docker eficientes es esencial para cualquier desarrollador o profesional en tecnología que busca optimizar sus aplicaciones y sus entornos de trabajo. Aquí te mostramos cómo puedes empezar a crear imágenes que no solo sean funcionales, sino también livianas y fáciles de mantener.
@@ -73,7 +73,11 @@ Primero se compila la aplicación, se publícan únicamente los ensamblados y lu
 ¿Por qué es importante optimizar el uso de Docker?
 Implementar estas prácticas permite no solo reducir el tamaño de las imágenes y optimizar su uso, sino que también ayuda a mejorar el tiempo de desarrollo. Las actualizaciones se convierten en un proceso sencillo, y la infraestructura en contenedores ofrece una mayor flexibilidad y control, que es esencial en ambientes de microservicios y devops.
 
-Ruta docker: https://github.com/docker
+Referencia: 
+https://github.com/docker
+Proyectos de curso:
+https://github.com/platzi/docker-avanzado
+
 
 
 ###################################################################################################################
@@ -119,11 +123,12 @@ Cada decisión debe alinearse con el entorno de desarrollo y las políticas vige
 
 Investigaciones en el ámbito de seguridad en contenedores señalan que estar atento y reaccionar a las vulnerabilidades es indispensable. Al conocer estos procesos, tener un plan de acción adecuado te permitirá mitigar estos riesgos eficazmente. Recuerda, la seguridad es un proceso continuo, no un evento puntual. ¡Continúa explorando y aprendiendo sobre la seguridad en tecnología para garantizar aplicaciones robustas y confiables!
 
+Practica:
+https://github.com/platzi/docker-avanzado/tree/main/DockerScan
 
 ###################################################################################################################
 Optimización de Imágenes de docker con Distroless:
 ###################################################################################################################
-https://github.com/GoogleContainerTools/distroless
 ¿Qué es el concepto Distroless y cómo se aplica a las imágenes de Docker?
 En el mundo del desarrollo de software, la optimización y eficiencia son vitales. Por ello, el concepto de imágenes "Distroless" ha ganado popularidad entre los desarrolladores que utilizan Docker. Las imágenes Distroless se basan en la idea de crear imágenes de Docker que sean lo más pequeñas y compactas posible al eliminar todas las capas y componentes innecesarios. Esta estrategia se asemeja a los conceptos de "serverless" o "wireless", donde uno se deshace de componentes físicos, pero aún se basa en su existencia subyacente.
 
@@ -161,6 +166,10 @@ Rendimiento optimizado: Las aplicaciones tienen un proceso de carga y ejecución
 
 Utilizar imágenes Distroless no se centra únicamente en eliminar la distribución de Linux, sino en optimizarla al máximo, otorgándote imágenes pequeñas pero completamente funcionales. Adentrarse en este enfoque te sitúa un paso adelante en el competitivo mundo del desarrollo de software, logrando aplicaciones más ágiles y seguras.
 
+Referencia: 
+https://github.com/GoogleContainerTools/distroless
+Practica:
+https://github.com/platzi/docker-avanzado/tree/main/Distroless
 
 ###################################################################################################################
 Compilación Multiplataforma
@@ -238,6 +247,9 @@ Docker te da la flexibilidad y el poder para decidir la mejor estrategia en el m
 
 Mantén siempre presente la decisión deliberada de utilizar o no el caché, evaluando las necesidades específicas de cada proyecto. Esta capacidad para ajustar los procesos te convierte en un experto en la gestión de contenedores y sus optimizaciones.
 
+Practica:
+https://github.com/platzi/docker-avanzado/tree/main/Cache
+
 
 ###################################################################################################################
 Reducción de Dependencias y Minimización de Tamaño
@@ -278,6 +290,9 @@ Tamaño reducido: Imágenes más pequeñas para mejorar la eficiencia del sistem
 Rendimiento: No sacrifiques el rendimiento por un tamaño menor.
 Seguridad: Nunca comprometas la seguridad de tu aplicación.
 Al final del día, optimizar el tamaño de tus imágenes será crucial para el éxito y la sostenibilidad de tus proyectos. Aprovecha al máximo estas técnicas y observa cómo tus aplicaciones empiezan a beneficiarse de menor consumo de recursos y mayor eficiencia. Con el conocimiento adquirido, ya estás listo para afrontar cualquier reto en tus despliegues distribuidos.
+
+Practica:
+https://github.com/platzi/docker-avanzado/tree/main/Dependencies
 
 
 ###################################################################################################################
@@ -324,11 +339,13 @@ Revisa permisos: Asegúrate que solo los archivos necesarios están accesibles p
 Organización: Mantén una estructura de directorios clara.
 Al aplicar estos principios, no solo mejorarás la eficiencia de tus imágenes Docker, sino que también protegerás tu proyecto contra posibles riesgos de seguridad y optimizarás los procesos de despliegue.
 
+Practicas:
+https://github.com/platzi/docker-avanzado/tree/main/BuildContext
+
 
 ###################################################################################################################
 Explorando Docker Hub
 ###################################################################################################################
-https://hub.docker.com/
 ¿Qué es Docker Hub y por qué es importante?
 Docker Hub es el repositorio de imágenes más grande en el mercado. Es la solución ideal para compartir imágenes de Docker, tanto en proyectos empresariales como personales. Este repositorio permite buscar y descargar una diversidad de imágenes que pueden mejorar profundamente la forma en que trabajas con contenedores.
 
@@ -374,6 +391,9 @@ Ejecutar una imagen:
 docker run nombre-de-imagen
 
 ¿Te preguntas por qué intentar Docker de esta forma? Es una herramienta poderosa que te permite jugar, explorar y definir si lo que has elegido se adapta a tus necesidades, sin comprometer el tiempo y espacio de tu equipo local.
+
+Referencia:
+https://hub.docker.com/
 
 
 ###################################################################################################################
@@ -427,6 +447,9 @@ Elegir entre una imagen multi-stage y una imagen con menos capas depende del cas
 Imágenes multi-stage: Ideales cuando necesitas un entorno de desarrollo dividido y algún resultado de compilación limpio en producción.
 Menos capas: Útiles cuando quieres una imagen ligera sin la necesidad de varias etapas.
 Ambas estrategias tienen como objetivo reducir el tamaño y mejorar el rendimiento de tus imágenes Docker. Adaptarlas a tus necesidades específicas hará que tus procesos sean más eficientes.
+
+Practica:
+https://github.com/platzi/docker-avanzado/tree/main/Capas
 
 
 ###################################################################################################################
@@ -484,6 +507,8 @@ Eficiencia de Recursos: Al mantener tus imágenes ligeras, reduces también el c
 
 Integrar un archivo Dockerignore es un paso estratégico y eficiente, que refuerza tanto la seguridad como el rendimiento en la gestión de imágenes Docker. Con esta práctica, aseguras que tus desarrollos sean ágiles, efectivos y libres de bloatware.
 
+Practica:
+https://github.com/platzi/docker-avanzado/tree/main/Ignore
 
 ###################################################################################################################
 Eliminación de Archivos Temporales y Residuos en Docker
@@ -527,6 +552,9 @@ Recuperación de espacio: Al eliminar archivos y datos innecesarios, liberarás 
 Mejor rendimiento: Un entorno de Docker más limpio y reducido ofrece un rendimiento general más ágil.
 Mantenimiento sencillo: Al automatizar el proceso de limpieza, minimizas el esfuerzo y evitas errores humanos en la administración de tu entorno Docker.
 Te animamos a explorar y adoptar estas prácticas en tu uso diario de Docker. No solo ganarás espacio y rendimiento, sino que también adquirirás mejores hábitos en la gestión de tus entornos de desarrollo. La eficiencia es clave en cualquier entorno tecnológico, y tú tienes el poder de alcanzar esa eficiencia con herramientas simples pero efectivas como Docker Prune.
+
+Practica:
+https://github.com/platzi/docker-avanzado/tree/main/Prune
 
 
 ###################################################################################################################
@@ -581,11 +609,982 @@ La ejecución de la imagen esté controlada: Sólo las acciones permitidas bajo 
 Se reduce el riesgo de malware: Evita que algún acceso futuro tenga la capacidad de insertar código malicioso.
 Al seguir estos pasos meticulosos y cuidadosos al crear tus Dockerfiles, estás fortaleciendo la seguridad de tus imágenes y protegiendo activamente tu entorno de desarrollo y producción. Implementa estas prácticas esenciales y continúa explorando maneras de optimizar tus habilidades y conocimientos en Docker para avanzar profesionalmente y mantener segura tu infraestructura.
 
+Practica:
+https://github.com/platzi/docker-avanzado/tree/main/Usuarios
+
 
 ###################################################################################################################
+Mejores Prácticas para Construcción de Imágenes
+###################################################################################################################
+https://hub.docker.com/
+¿Cómo crear imágenes Docker listas para producción?
+El camino hacia la creación de imágenes Docker robustas y eficientes para entornos productivos está lleno de prácticas esenciales que no solo optimizan el rendimiento, sino también la seguridad. Con la experiencia se adquiere la habilidad de integrar estas prácticas de manera natural, garantizando que tus imágenes cumplan con las expectativas de producción.
+
+¿Por qué usar imágenes oficiales de Docker?
+A la hora de empezar a construir nuestras imágenes, la elección de la base es fundamental. Utilizar imágenes oficiales de Docker es una práctica recomendada, ya que estas imágenes han sido revisadas y actualizadas constantemente para garantizar su fiabilidad. Además, al elegir entre las imágenes oficiales disponibles en Docker Hub, estás optando por una opción más segura y optimizada. Aunque las imágenes de repositorios públicos y de la comunidad puedan parecer atractivas, priorizar las oficiales asegura una base confiable.
+
+¿Qué considerar al seleccionar la etiqueta de una imagen?
+Un error común al trabajar con imágenes base es optar por la etiqueta “latest”, que es la más reciente y, potencialmente, inestable. Es preferible elegir una versión específica, como "ubuntu:20.04", para que el comportamiento de tu proyecto sea predecible y estable. Esto es crucial para evitar problemas que puedan surgir debido a cambios repentinos en la imagen base.
+
+¿Por qué elegir imágenes mínimas como Alpine?
+Con el tiempo y la práctica, te darás cuenta de la importancia de trabajar con imágenes livianas. Un ejemplo de esto son las imágenes Alpine, que pesan solo alrededor de cinco megas. Esta reducción del tamaño contribuye al rápido despliegue y optimización del espacio de almacenamiento. Sin embargo, es esencial no sacrificar el rendimiento por la ligereza. Prioriza el desempeño de la imagen sobre su tamaño para asegurar que tu proyecto Docker sea escalable y eficiente.
+
+¿Qué ventajas ofrecen los Multi Stage Builds?
+El uso de Multi Stage Builds facilita la creación de Dockerfiles más organizados y eficientes. Esta técnica permite separar las fases de construcción, reduciendo el tamaño final de la imagen al incluir solo los componentes necesarios para el entorno de producción. Un Dockerfile claro no solo beneficia a su creador, sino también a todo el equipo que interactúa con él, favoreciendo la colaboración y el mantenimiento.
+
+¿Cómo gestionar el almacenamiento y los archivos innecesarios en Docker?
+Es esencial mantener limpio tu entorno Docker utilizando la palabra mágica prune, que elimina archivos y cachés innecesarios liberando espacio valioso en tu disco duro. Realizar este mantenimiento de manera regular según el uso de Docker evitará la acumulación de datos inservibles y optimizará los recursos de tu equipo.
+
+docker system prune
+Esta línea de comando te ayudará a limpiar no solo las imágenes y contenedores que no estén en uso, sino también volúmenes, redes, y otros elementos del sistema Docker.
+
+¿Por qué es importante crear usuarios dentro de Docker?
+Por defecto, las imágenes de Docker se crean con el usuario root, lo cual presenta riesgos de seguridad. El crear y usar un usuario con permisos mínimos dentro de tu Dockerfile es una medida preventiva que reduce los privilegios a lo estrictamente necesario. Esto no solo mejora la seguridad del sistema sino que establece un entorno más controlado y manejable.
+
+RUN adduser -D myuser
+USER myuser
+Implementar estas prácticas fortalecerá tus proyectos Docker, facilitando su implementación en entornos tanto de nube como on-premise. Reforzar la seguridad, mejorar la organización del código y optimizar recursos son estrategias clave para el éxito en la gestión y despliegue de contenedores.
+
 
 ###################################################################################################################
-
+Despliegue de Docker en Azure y Entornos Locales
 ###################################################################################################################
 
+¿Cómo llevar una imagen Docker optimizada a la nube con Microsoft Azure?
+En el mundo del desarrollo y despliegue de aplicaciones, manejar eficientemente imágenes Docker es crucial para asegurar un flujo de trabajo fluido y sin complicaciones. Ya dominamos el arte de crear la imagen perfecta, optimizada y lista para producción. Es momento de darle el honor de surcar los cielos y llevarla a la nube. En esta guía te mostraré cómo hacerlo con Microsoft Azure, aunque el proceso es bastante similar en otros proveedores como AWS o Google Cloud.
+
+¿Qué necesita nuestra imagen Docker antes de subir a la nube?
+Antes de sumergirnos en los pasos técnicos, es importante entender que:
+
+Contenedor o registro privado: No utilizaremos un repositorio público como Docker Hub. En su lugar, configuraremos un registro de contenedores privado.
+Preparación de la imagen: Asegúrate de que tu imagen Docker esté optimizada. Esto no solo mejorará el rendimiento, sino que también reducirá costos al disminuir el tamaño de la imagen.
+¿Cómo crear un Container Registry en Azure?
+Comenzaremos creando un Container Registry en Azure, fundamental para el alojamiento y manejo de imágenes Docker.
+
+Accede al portal de Azure.
+Crea un grupo de recursos: Imagina esto como un espacio de trabajo donde alojarás toda la infraestructura necesaria para tu proyecto.
+Selecciona "Create" y escribe "Container Registry" en la barra de búsqueda.
+Nombra tu registro: Asegúrate que el nombre es único. En este caso, usamos "Platzi Registry".
+Configura la ubicación: Usualmente se elige una región cercana, como el este de Estados Unidos.
+Elige el plan estándar: Se sugiere este plan para la mayoría de las aplicaciones.
+Crea el registro y espera unos minutos a que se despliegue completamente.
+¿Cómo subir una imagen Docker a Azure Container Registry?
+Ahora subiremos nuestra imagen Docker desde un entorno local al registro que acabamos de crear:
+
+Inicia sesión en Azure desde la terminal:
+
+AZ ACR login -n NombreDelRegistry
+
+Este comando autentica la terminal con el registro de contenedores.
+
+Crea la imagen en tu entorno local:
+
+cd front-end docker build -t NombreDelRegistry.azurecr.io/sitio-web:latest .
+
+Empuja la imagen al registro de Azure:
+
+docker push NombreDelRegistry.azurecr.io/sitio-web:latest
+
+¿Cómo verificar la carga en Azure Container Registry?
+Regresa al portal de Azure y ve a la sección de "Repositorios" dentro de tu Container Registry.
+
+Encuentra tu imagen bajo el nombre "sitio web".
+Aquí puedes visualizar la fecha y otros detalles, como los tags (versiones). Esto es vital para manejar diferentes versiones de la misma imagen sin problemas.
+Con estos sencillos pasos, hemos gestionado de manera eficiente nuestras imágenes Docker, asegurándonos de que estén seguras y listas para ser utilizadas en cualquier herramienta de implementación que Azure ofrece.
+
+Practica:
+https://github.com/platzi/curso-de-docker-fundamentos
+
+
 ###################################################################################################################
+Publicar tu imagen a Container Apps de Azure
+###################################################################################################################
+¿Cómo se despliega una imagen de contenedor en Azure?
+Desplegar una imagen de contenedor en Azure puede parecer una tarea complicada al principio, pero con los pasos adecuados, se convierte en un proceso bastante llevadero que maximiza el uso de su infraestructura en la nube. Azure ofrece la flexibilidad necesaria para manejar estas actividades de manera eficiente, asegurando la integridad y accesibilidad de tus aplicaciones.
+
+¿Cómo se prepara el registro de contenedores en Azure?
+Para empezar, una de las primeras acciones es seleccionar el registro de contenedores en Azure y activar el acceso de usuario administrador. Esto es crucial para permitir que las aplicaciones de contenedor puedan interactuar con el registro sin problemas. Aquí están los pasos básicos:
+
+Inicie sesión en el portal de Azure.
+Seleccione su registro de contenedores.
+Acceda a la sección de configuración (settings).
+Seleccione 'llaves de acceso'.
+Habilite el acceso de usuario administrador.
+¿Cuál es el proceso para crear una container app?
+Una vez que el registro de contenedores esté preparado, el siguiente paso es crear la aplicación de contenedor en el portal de Azure. Esto incluye establecer los principales parámetros de configuración que el sistema requiere:
+
+Grupo de recursos: Seleccione el grupo de recursos que se utilizará, por ejemplo, "contenedores Platzi".
+Nombre del contenedor: Asigne un nombre apropiado a su container app, como "sitio web Amin".
+Despliegue desde una imagen: Elija desplegar la aplicación desde una imagen en lugar de un artefacto o código fuente.
+Creación de un nuevo ambiente de trabajo: Seleccione "crear uno nuevo" si desea un nuevo entorno de trabajo para container apps.
+¿Cómo se configura la imagen del contenedor?
+Para configurar adecuadamente la imagen del contenedor, siga estos pasos:
+
+Seleccionar origen de imagen: Podría ser desde Azure Container Registry o Docker Hub.
+Suscripción y registro: Asegúrese de seleccionar su suscripción y el registro correcto donde está publicada la imagen, por ejemplo, el registro creado llamado "Platzi".
+Imagen y TAG: Seleccione la imagen deseada, como "sitio web", y el TAG especificado, como "Latest".
+Configurar Ingress: Habilite "Ingress" y configure para aceptar tráfico desde todas las ubicaciones, habilitando la conectividad necesaria.
+¿Qué ocurre después del despliegue en Azure?
+Una vez que ha completado el proceso de configuración y creación, Azure procederá con el despliegue de la instancia de su container app. Recibirá notificaciones de Azure, y podrá acceder al recurso desplegado.
+
+Acceda a la URL de la aplicación publicada.
+Puede expandir la sección de aplicación para verificar detalles del contenedor.
+Recuerde que aunque las imágenes están en un registro privado, al desplegarlas en una container app, se vuelven accesibles públicamente.
+Finalmente, es fundamental controlar el acceso y asegurar que sólo las personas autorizadas puedan ver o modificar la aplicación según los propósitos del negocio. A medida que el despliegue de contenedores se vuelve más común, estos procedimientos se convierten en habilidades esenciales para desarrolladores y administradores de sistemas.
+
+
+###################################################################################################################
+Modelos de Red en Docker
+###################################################################################################################
+¿Qué modelos de red existen en Docker?
+Explorar redes en Docker abre un mundo de posibilidades, especialmente para entender cómo operan los contenedores. Docker ofrece cinco modelos distintos de red, pero uno destaca como el más utilizado, mientras que los demás son más apropiados para pruebas. Esta sección desglosa cada uno de estos modelos y sus aplicaciones.
+
+¿Qué es el modelo de red bridge?
+El modelo bridge es el predeterminado en Docker y permite la comunicación entre contenedores en un entorno local. Este modelo es perfecto para pruebas internas, donde quieres que los contenedores "hablen" sin interferir con el mundo exterior.
+
+¿Para qué sirve el modelo de host?
+El modelo host permite que los contenedores usen la dirección IP del host, simulando un equipo real dentro de la red. Este modelo es eficiente y consume más recursos, ideal para simular entornos de producción y pruebas detalladas de red.
+
+¿Por qué aislar un contenedor?
+El modelo de red aislado desconecta un contenedor del mundo exterior, útil para pruebas de resiliencia del sistema ante fallos de comunicación. Esto permite analizar el comportamiento del sistema si una parte no está operativa, ideales para entornos de prueba.
+
+¿Cómo funciona el modelo overlay?
+El modelo overlay posibilita que los contenedores se comuniquen entre sí, aun estando en máquinas diferentes. Es crucial en escenarios de despliegue a gran escala y es ampliamente utilizado por orquestadores como Kubernetes.
+
+¿Qué es el modelo MacVLAN?
+MacVLAN asigna una dirección MAC real a cada contenedor, haciéndolos parecer máquinas independientes para la red. Este modelo es útil para crear entornos en los que cada contenedor actúa como una entidad autónoma, proporcionando flexibilidad para diversas configuraciones.
+
+¿Cómo establecer comunicación entre contenedores en Docker?
+Establecer comunicación entre contenedores es un aspecto esencial al trabajar con Docker, y el modelo bridge nos facilita este proceso. A continuación, te mostramos un ejemplo práctico de cómo configurar una red personal para que dos contenedores se comuniquen.
+
+¿Cómo crear una red bridge?
+Para este ejercicio, comenzamos creando una red con el comando:
+
+docker network create mi_red_bridge
+Este comando genera una red identificada por un conjunto único de caracteres.
+
+¿Cómo descargar y ejecutar un contenedor Nginx?
+Primero, descargamos y ejecutamos un contenedor de Nginx, asignándolo a nuestra red:
+
+docker run -d --network mi_red_bridge --name servidor_web nginx:latest
+Este comando despliega Nginx en segundo plano, dentro de la red bridge.
+
+¿Cómo ejecutar un cliente con una terminal Linux?
+Para interactuar, necesitamos otro contenedor que actuará como cliente:
+
+docker run -it --network mi_red_bridge --name cliente alpine:latest /bin/sh
+Alpine proporciona una terminal ligera para ejecutar comandos de prueba.
+
+¿Cómo establecer comunicación entre los contenedores?
+En el cliente, instalamos 'curl' para probar la comunicación:
+
+apk add --no-cache curl
+Luego, usamos 'curl' para acceder al servidor web:
+
+curl http://servidor_web
+Esto muestra la página de inicio del servidor Nginx desde el cliente, confirmando la comunicación entre ambos contenedores vía la red bridge.
+
+Recomendaciones para practicar con redes en Docker
+Jugar con las configuraciones de red en Docker es una excelente forma de aprender y comprender mejor el comportamiento de contenedores en diferentes entornos.
+
+
+
+###################################################################################################################
+Exposición y Publicación de Puertos en Docker
+###################################################################################################################
+¿Cómo gestionar los puertos con Docker?
+Gestionar los puertos en Docker es fundamental para cualquier desarrollador que busque desplegar aplicaciones de manera segura y eficiente. Docker, por defecto, cierra todos los puertos, una práctica que constituye uno de los pilares de la seguridad en la tecnología de contenedores. Esto, aunque puede parecer complicado al inicio, es esencial para proteger nuestras aplicaciones y datos. Vamos a explorar cómo puedes manejar los puertos en Docker usando ejemplos prácticos y comandos útiles.
+
+¿Cómo poner en marcha un contenedor y gestionar sus puertos?
+Para empezar a trabajar con Docker, el comando básico que necesitarás es docker run, el cual inicias así:
+
+docker run -d -p 8080:80 --name miNginX nginx
+-d significa que el contenedor se ejecutará en segundo plano.
+-p 8080:80 indica que el puerto 8080 de tu máquina se mapeará al puerto 80 del contenedor.
+--name miNginX especifica un nombre para tu contenedor, en este caso, miNginX.
+nginx es la imagen que estás usando.
+Una vez ejecutado, puedes verificar que tu contenedor esté corriendo con el comando:
+
+docker ps
+Allí verás una lista de contenedores activos, con detalles como su ID y los puertos que están mapeados.
+
+¿Cómo usar múltiples contenedores con diferentes puertos?
+Puedes administrar varios contenedores de la misma imagen en puertos distintos con facilidad. Supongamos que deseas ejecutar otro contenedor NginX pero en un puerto diferente:
+
+docker run -d -p 1524:80 --name miOtroNginX nginx
+Esta vez, estamos empleando el puerto 1524 en la máquina para el mismo puerto 80 del contenedor. Un detalle crucial es que ningún dos contenedores pueden utilizar el mismo puerto simultáneamente.
+
+Para ver y gestionar los contenedores y sus puertos fácilmente, Docker Desktop ofrece una interfaz gráfica donde puedes observar y administrar todos tus contenedores.
+
+¿Cómo automatizar el mapeo de puertos con Docker?
+Si prefieres no preocuparte de especificar manualmente un puerto cada vez, puedes permitir que Docker gestione esto automáticamente:
+
+docker run -d -P --name randomNginX nginx
+Al usar -P, Docker asigna un puerto abierto automáticamente en tu máquina al puerto 80 del contenedor. Puedes identificar el puerto asignado ejecutando:
+
+docker port randomNginX
+Recomendaciones para la gestión de puertos en Docker
+Seguridad ante todo: Mantén los puertos cerrados a menos que realmente los necesites abiertos para evitar vulnerabilidades.
+Documenta tus puertos: Lleva un registro de qué puertos estás usando para cada aplicación o servicio para evitar conflictos.
+Usa Docker Desktop: Aprovecha su interfaz para una gestión más visual y simple de tus contenedores y puertos.
+Familiarízate con los comandos: Al dominar comandos como docker ps, docker port y docker run, te moverás más confiado y rápido en tu entorno de desarrollo.
+Con estas prácticas y comandos, te encontrarás gestionando los puertos en Docker con facilidad y precisión, manteniendo siempre presente la seguridad y eficiencia de tu entorno.
+
+
+
+###################################################################################################################
+Balanceo de Carga con Docker
+###################################################################################################################
+¿Cómo interactúan los contenedores de Docker con la red?
+Docker ofrece un entorno versátil para crear y manejar contenedores que permiten establecer interacciones específicas entre ellos. Al implementar redes dentro de Docker, los contenedores pueden comunicarse y compartir recursos. Este artículo explica cómo configurar la red en Docker al desplegar múltiples sitios web variando solamente una palabra en su contenido, usando un proxy inverso con Nginx.
+
+¿Cómo construir contenedores de sitios web personalizados?
+Primero, es esencial entender cómo crear contenedores para diferentes sitios web. El objetivo es lograr tres versiones de un sitio web utilizando contenedores Docker.
+
+Crear directorios para los sitios web: En Visual Studio, se crea una carpeta llamada carga y dentro de ella tres subcarpetas: sitio1, sitio2, y sitio3.
+Configurar Dockerfile para cada sitio: En cada carpeta de sitio, se incluye un Dockerfile que usa una imagen base de Nginx y despliega una sencilla página HTML. Esta página debe indicarse como "mi página de inicio personalizada" seguida de su versión para distinguir entre las tres.
+Aquí un ejemplo de cómo podría verse un Dockerfile para uno de los sitios:
+
+FROM nginx
+
+COPY ./index.html /usr/share/nginx/html/index.html
+
+EXPOSE 80
+3. Crear imágenes Docker: Empleando el terminal, se crean imágenes Docker para cada sitio. Ejemplo para sitio1:
+
+docker build -t server1 ./sitio1
+¿Cómo configurar un proxy inverso con Nginx?
+El siguiente paso es establecer un proxy inverso que distribuya el tráfico entre las versiones de los sitios usando Nginx.
+
+Crear una carpeta de proxy: Se crea una nueva carpeta llamada proxy.
+Configurar el Dockerfile para Nginx: En esta carpeta proxy, se define un Dockerfile que incluya Nginx como base y copie un archivo de configuración nginx.conf al contenedor.
+Aquí un ejemplo simplificado del Dockerfile:
+
+FROM nginx
+
+COPY ./nginx.conf /etc/nginx/nginx.conf
+3. Escribir el archivo de configuración nginx.conf: Este archivo dirige las solicitudes al proxy reverso y distribuye la carga entre los contenedores.
+
+Ejemplo del contenido básico del archivo nginx.conf:
+
+events {}
+
+http {
+    upstream backend {
+        server backend1;
+        server backend2;
+        server backend3;
+    }
+
+    server {
+        listen 80;
+
+        location / {
+            proxy_pass http://backend;
+        }
+    }
+}
+¿Cómo ejecutar los contenedores y el proxy?
+Crear la red en Docker: Configura un entorno de red con el comando:
+
+docker network create red_balance
+
+Desplegar los sitios web en red: Luego, ejecuta cada contenedor del sitio en segundo plano, asegurándose de conectarlo a la red creada:
+
+docker run -d --name backend1 --network red_balance server1
+
+Repita el mismo proceso para los otros contenedores backend2 y backend3.
+
+Implementar el proxy: Crear la imagen y el contenedor del proxy, asegurando que este conectado a la misma red:
+
+docker build -t proxy ./proxy docker run -d --name load_balance -p 8080:80 --network red_balance proxy
+
+¿Cómo verificar la configuración?
+Para encontrar las imágenes y contenedores creados, utilizamos comandos como docker images y docker ps. Los listados confirmarán si los contenedores están operativos y enlazados correctamente:
+
+Docker Images: Confirma la existencia de las imágenes de los sitios y el proxy.
+Docker PS: Muestra los contenedores operativos, permitiendo supervisar el estado del sistema.
+Consejos prácticos:
+Aprovecha Docker Desktop para una interfaz visual del entorno creado.
+Refresca el navegador para observar cómo cambia la versión de la página.
+Experimenta añadiendo más sitios para robustecer la experiencia y observar el balanceo de carga.
+Finalmente, si bien el ejemplo es educativo, resulta útil para entender el concepto de balanceo de carga en aplicaciones desarrolladas con contenedores. En un entorno productivo, un orquestador como Kubernetes podría facilitar la gestión del tráfico entre contenedores.
+
+Practica:
+https://github.com/platzi/docker-avanzado/tree/main/Carga
+
+###################################################################################################################
+Ejecución de Scripts Multi-line en Docker
+###################################################################################################################
+¿Cómo manejar configuraciones previas en contenedores Docker efectivamente?
+En el desarrollo y despliegue de aplicaciones, la configuración previa en contenedores es fundamental para asegurar un entorno óptimo y listo para la ejecución. En cualquier lenguaje de programación, como Node.js o Python, necesitarás paquetes específicos que pueden ser instalados y configurados correctamente a través de un Dockerfile. Este documento te proporciona un método estándar y efectivo para configurar los elementos necesarios antes de desplegar tu contenedor y asegurar así el mejor rendimiento de tu aplicación.
+
+¿Cuál es la importancia de usar RUN en un Dockerfile?
+Dentro de un Dockerfile, la palabra reservada RUN es esencial para ejecutar comandos y configuraciones previas. Este proceso hace que la aplicación sea funcional en un entorno ya preparado, lo que simplifica la complejidad de despliegue. Veamos un ejemplo paso a paso de cómo optimizar tu Dockerfile utilizando RUN.
+
+# Seleccionar la imagen base de Ubuntu
+FROM ubuntu:latest
+
+# Ejecutar actualizaciones e instalaciones
+RUN apt-get update && apt-get install -y \
+    curl \
+    vim \
+    git && \
+    echo "Instalación completa"
+
+# Ejecutar comandos adicionales
+RUN echo "Inicio de script" && \
+    echo "Ejecutando comandos adicionales..."
+¿Cómo mejora la estructura organizativa del código?
+La estructuración y organización del código dentro de Dockerfile puede ir más allá de utilizar RUN. Para mantener un Dockerfile limpio y de fácil lectura, es recomendable externalizar ciertos scripts que contengan configuraciones extensas.
+
+#!/bin/bash
+echo "Iniciando script"
+apt-get update
+apt-get install -y curl vim git
+echo "Instalación completada"
+Aprende a integrar scripts externos
+Para integrarlo en tu Dockerfile, puedes copiar este script al contenedor y ejecutarlo:
+
+# Copiar el script al contenedor
+COPY script.sh /usr/local/bin/
+
+# Cambiar permisos y ejecutar el script
+RUN chmod +x /usr/local/bin/script.sh && \
+    /usr/local/bin/script.sh
+Aquí, COPY lleva el archivo externo al contenedor y RUN lo ejecuta, permitiendo mantener la limpieza del Dockerfile original.
+
+¿Cómo ejecutar contenedores en segundo plano?
+Los contenedores pueden requerir estar activos mientras esperan interacciones. Ejecutar un contenedor que no tiene un proceso de espera conducirá a su cierre inmediato. Para manejar este comportamiento, es posible ejecutar el contenedor en segundo plano.
+
+docker run -d --name scripts imagen_scripts tail -f /dev/null
+Este comando inicia el contenedor en modo desatendido (-d) agregando tail -f para que el contenedor espere interacciones.
+
+Uso de Docker Exec para ejecutar comandos directamente
+Finalmente, si necesitas configurar algo específico dentro de un contenedor ya ejecutado, docker exec te permite llevar a cabo operaciones sin modificar el Dockerfile o los scripts.
+
+docker exec -it nombre_contendor bash -c "comando_deseado"
+Esta técnica es útil para configuraciones únicas de contenedores, pero menos práctica para configuraciones a gran escala como con múltiples contenedores.
+
+Con estas estrategias, podrás gestionar con eficacia la configuración y ejecución de tus contenedores Docker, asegurando un flujo de desarrollo más limpio y organizado. Sigue explorando para mejorar continuamente tus habilidades y optimizar el rendimiento de tu software.
+
+Practica:
+https://github.com/platzi/docker-avanzado/tree/main/Scripts
+
+
+###################################################################################################################
+Automatización de CI/CD con Docker
+###################################################################################################################
+¿Por qué es importante DevOps para la integración y despliegue continuo de contenedores?
+La integración y despliegue continuo son esenciales en el mundo de DevOps, especialmente cuando trabajamos con numerosos contenedores en producción. El proceso manual de manejar cada contenedor se vuelve insostenible rápidamente. Aquí, la automatización es clave, ya que permite que cada cambio en el código se despliegue automáticamente mediante un commit en tu repositorio, lo que garantiza un flujo de trabajo más eficiente, confiable y menos propenso a errores humanos.
+
+¿Cómo se configura un flujo de trabajo de integración continua?
+Configurar un flujo de trabajo eficaz comienza con la organización de los archivos en tu repositorio. En este caso, se sugiere crear una carpeta llamada "CI" que contendrá tu Dockerfile:
+
+# Esto es un ejemplo básico de un Dockerfile que podrías usar
+FROM nginx:alpine
+COPY . /usr/share/nginx/html
+Este archivo Docker actúa como base para publicar tus cambios. Después de crear el archivo, es necesario subir los cambios al repositorio de GitHub usando los comandos:
+
+git status
+git add .
+git commit -m "carpeta CI agregada"
+git push
+Después de confirmar que los cambios se reflejan en tu repositorio en GitHub, se crea un flujo de trabajo de Actions. GitHub facilita algunas opciones, especialmente cuando se trabaja con imágenes Docker, pero se puede optar por un flujo más manual adaptado a tus necesidades.
+
+¿Cómo integrar GitHub Actions con Docker?
+Dentro del flujo de trabajo de GitHub Actions, es crucial configurar el archivo YAML que ejecutará el ciclo de integración continua. Este archivo indica, entre otras cosas, que el flujo se llama DockerCI y se ejecutará en la rama main. Utiliza Ubuntu como el entorno para ejecutar la acción, y uno de los pasos iniciales será hacer login en DockerHub. Para esto, necesitas configurar secretos en tu repositorio de GitHub, un proceso que incluye:
+
+Crear un nombre de usuario y un token de DockerHub. Ve a DockerHub, inicia sesión y ubica tu nombre de usuario. Después, en la sección de configuración de cuenta, busca la opción para generar un Personal Access Token.
+
+Añadir secretos en GitHub. Dirígete a Settings en tu repositorio de GitHub, navega a Secrets y en Actions, agrega el usuario y el token de DockerHub como nuevos secretos.
+
+Con los secretos configurados, puedes proceder a construir y publicar la imagen Docker automáticamente mediante comandos como:
+
+- name: Build Docker image
+  run: docker build --platform linux/amd64 -t [tu-usuario]/[tu-repo]:latest .
+
+- name: Push Docker image
+  run: docker push [tu-usuario]/[tu-repo]:latest
+Estos pasos garantizarán que con cada push de cambios en tu repositorio, GitHub Actions tome el Dockerfile y publique una nueva imagen en DockerHub sin intervención manual.
+
+¿Qué ventajas ofrece automatizar el despliegue de contenedores?
+Automatizar el despliegue a través de sistemas CI/CD (Continuous Integration/Continuous Deployment) trae múltiples beneficios:
+
+Ahorro de tiempo: Reduce significativamente el tiempo requerido para desplegar aplicaciones, agilizando el paso de desarrollo a producción.
+Menos errores: Disminuye la posibilidad de errores humanos al asegurar que cada despliegue sigue un proceso uniforme y probado.
+Consistencia y fiabilidad: Garantiza que el software se construye y despliega de forma consistente, lo que beneficia tanto la infraestructura como la calidad del software.
+Escalabilidad: Facilita la gestión de cambios y el despliegue a gran escala, adaptándose a la evolución constante de los proyectos de software.
+En resumen, esta estrategia no solo optimiza el manejo de contenedores, sino que también mejora el ciclo de vida del software en su totalidad, fomentando la mejora continua y el aprendizaje continuo.
+Practica: https://github.com/platzi/docker-avanzado/tree/main/CI
+
+###################################################################################################################
+Estrategias Avanzadas de CI/CD en Docker
+###################################################################################################################
+¿Cómo combinar DevOps con GitHub Actions para el despliegue de contenedores?
+La integración de la metodología DevOps junto con el despliegue de contenedores es una técnica moderna que puede revolucionar tus flujos de trabajo. La clave está en entender cómo GitHub Actions puede facilitar este proceso. En este artículo, exploraremos cómo usar GitHub Actions, una herramienta poderosa que permite automatizar pruebas, manejos de despliegues y más, de una manera creativa y flexible.
+
+¿Qué son y cómo empezar con las GitHub Actions?
+Las GitHub Actions ofrecen un entorno flexible para la automatización de tareas dentro de un repositorio. Puedes definir flujos de trabajo o "workflows" que se ejecutan en diferentes eventos. La personalización es la clave: para comenzar, puedes crear un flujo de trabajo desde cero en lugar de usar plantillas prediseñadas, lo cual te permitirá adaptar cada paso a tus necesidades específicas.
+
+# Ejemplo básico de fluco de trabajo en GitHub Actions
+name: Docker Test
+on: [push] # Define el evento que desencadena el workflow
+
+jobs:
+  DockerTest:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup Docker
+      run: echo "Setup Docker Engine"
+
+    - name: Docker Build and Test
+      run: |
+        docker build . -t my-image
+        docker run --rm my-image cmd-to-run-tests
+¿Cómo configurar y ejecutar pruebas en un contenedor?
+Después de crear un flujo de trabajo, el siguiente paso crucial es configurar y ejecutar tus pruebas. Un detalle importante es asegurarte de que la configuración de tu archivo YAML sea correcta, ya que incluso un pequeño error de indentación puede causar problemas. Veamos un caso en el que las pruebas se ejecutan dentro de un contenedor Docker.
+
+Primero, necesitas un "job" específico que se ejecutará en un agente. En este contexto, estamos implementando y probando dentro de un contenedor de Alpine Linux. Utilizamos docker exec para ejecutar comandos en el contenedor.
+
+# Comando para ejecutar pruebas dentro de un contenedor
+docker exec -it container_name sh -c "cd /path/to/tests && ./run-tests.sh"
+Este comando te permite aprovechar los scripts de shell para realizar pruebas sin necesidad de bash, una vez que Alpine no cuenta con bash de serie.
+
+¿Qué pasos seguir después de las pruebas exitosas?
+Una vez que confirmes que las pruebas se han completado con éxito, el siguiente paso es plantear el despliegue de la imagen activa en producción o en un entorno de preproducción. Antes de realizar el despliegue, asegúrate de que las pruebas correspondan al tipo de imagen, por ejemplo, si desarrollas una API, utiliza una prueba como curl para verificar el correcto funcionamiento de los endpoints.
+
+Para cerrar esta fase con éxito:
+
+Revisar logs y resultados: Asegúrate de que todos los logs reflejen correctamente los resultados de las pruebas.
+Validar la imagen: Verifica que la imagen Docker pueda ser ejecutada en un entorno local sin problemas.
+Planificar el despliegue: Decide si vas directo a producción o pruebas adicionales son necesarias.
+Es esencial adaptar las pruebas al tipo de contenedor que estás utilizando. Estos parámetros pueden variar según las especificaciones del contenedor y el tipo de aplicación que estés desplegando.
+
+En conclusión, GitHub Actions proporciona una estructura robusta para automatizar casi cualquier proceso dentro de un ciclo de DevOps y mejora tanto el desarrollo como la implementación de proyectos basados en contenedores, haciendo esta herramienta indispensable para cualquier desarrollador moderno.
+Practica: https://github.com/platzi/docker-avanzado/tree/main/.github/workflows
+
+
+###################################################################################################################
+Publicando mi imagen de docker a la nube con CI/CD
+###################################################################################################################
+¿Cómo desplegar una aplicación con Azure y Docker usando GitHub Actions?
+En el mundo tecnológico actual, el despliegue de aplicaciones no es solo una necesidad, sino una habilidad esencial. Aproximarse al despliegue continuo mediante herramientas como Azure, Docker y GitHub Actions puede simplificar enormemente el proceso, haciéndolo más eficiente y menos propenso a errores manuales. En esta ocasión, exploraremos cómo configurar de manera efectiva este flujo de trabajo.
+
+¿Cómo crear una web app en Azure?
+El primer paso para desplegar tu aplicación en la nube es configurar una web app en Azure. Esto te permitirá alojar tu contenedor de Docker para acceso público y garantiza que cualquier actualización se refleje de manera inmediata. Para ello:
+
+Accede al portal de Azure y selecciona "Web App" de las opciones disponibles.
+Elige la opción para contenedores y opta por Linux como el sistema operativo.
+Configura el grupo de recursos y elige una región adecuada, por ejemplo, EastUS.
+Selecciona un plan básico para mantener bajos los costos en pruebas iniciales.
+Configura las opciones de red para permitir acceso público.
+¿Cómo vincular DockerHub a Azure?
+Una vez creada la web app, es imprescindible vincularla a la imagen de Docker que deseas desplegar desde DockerHub. Asegúrate de:
+
+Configurar en la sección de contenedores el acceso a tu imagen pública de DockerHub.
+Insertar correctamente la URL del hub, el nombre de la imagen y su tag (por ejemplo, latest).
+¿Cómo configurar GitHub Actions para despliegue continuo?
+GitHub Actions permite automatizar el despliegue transfiere tus cambios desde el repositorio de GitHub a la web app en Azure sin intervención manual. Configura tus GitHub Actions siguiendo estos pasos:
+
+Dirígete a Settings en tu repositorio de GitHub y agrega un nuevo secreto llamado Azure WebApp Publish Profile.
+Carga el perfil de publicación desde Azure en este secreto, asegurando que las credenciales están protegidas.
+Edita tu archivo YAML en .github/workflows para incluir un paso de autenticación que utilice el nuevo secreto: ```yaml
+name: Authenticate to Azure uses: azure/webapps-deploy@v2 with: app-name: 'AminES WebApp' publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }} images: 'amin_espinosa/website_platzi:latest' ```
+Ajusta el flujo de trabajo para que cubra los pasos desde construir y publicar la imagen hasta su despliegue.
+¿Qué esperar después de la configuración?
+Cuando hagas un commit en tu repositorio, se disparará automáticamente el flujo que realizará el Docker Build, Docker Push y finalmente el despliegue de la nueva imagen.
+Puedes vigilar el estado del despliegue directamente desde la sección de Actions en tu repositorio y observar cómo los cambios se implementan en tiempo real.
+
+Practica: https://github.com/platzi/docker-avanzado/tree/main/.github/workflows
+
+
+###################################################################################################################
+Retomando Docker Compose
+###################################################################################################################
+¿Qué es Docker Compose y por qué es importante?
+Cuando nos adentramos en el mundo de los microservicios y la orquestación de contenedores, Docker Compose surge como una herramienta indispensable. Nos permite manejar múltiples contenedores de forma eficiente y organizada. Con Docker Compose, no solo es posible desplegar un contenedor, sino gestionar y publicar conjuntamente docenas de ellos a través de configuraciones centralizadas en un archivo .yaml. Este enfoque simplifica el manejo de los microservicios y es una excelente introducción para quienes desean familiarizarse con conceptos más complejos en la orquestación de contenedores.
+
+¿Cómo configurar Docker Compose?
+Creación de la estructura de carpetas y archivos
+El primer paso consiste en crear la estructura de carpetas adecuada para nuestro proyecto. Siguiendo las mejores prácticas demostradas, se puede crear una nueva carpeta, por ejemplo, llamada Compose. Dentro de esta carpeta, podemos copiar previamente la estructura de carpetas utilizada en un ejercicio anterior, como la que se utilizó en la clase de balanceadores de cargas, para agilizar el proceso.
+
+$ mkdir Compose
+$ cp -r /path/to/balance-load-exercise/* Compose/
+Asegúrate de eliminar cualquier archivo copiado que no sea necesario para el nuevo setup.
+
+Creación del archivo docker-compose.yml
+Es crucial crear un archivo docker-compose.yml en la raíz de nuestra carpeta. Este archivo determinará cómo se despliegan y configuran nuestros contenedores. Al igual que un Dockerfile, debe estar correctamente nombrado para que Docker lo identifique.
+
+version: '3'
+services:
+  proxy:
+    build: ./proxy
+    ports:
+      - "8080:80"
+    networks:
+      - red_balance
+
+  sitio1:
+    build: ./site1
+    networks:
+      - red_balance
+
+  sitio2:
+    build: ./site2
+    networks:
+      - red_balance
+
+  sitio3:
+    build: ./site3
+    networks:
+      - red_balance
+
+networks:
+  red_balance:
+    driver: bridge
+Descripción de los servicios
+En el archivo de configuración, cada bloque bajo services representa un contenedor que deseamos desplegar. Por ejemplo, proxy se origina desde su respectiva carpeta y necesita varios puertos para la comunicación entre el Docker host y el contenedor. Los sitios (sitio1, sitio2, sitio3) tienen definidos sus contextos de compilación.
+
+Gestión de redes
+Definir una red dentro del archivo docker-compose.yml nos ofrece una administración centralizada de las conexiones entre contenedores. En este caso, red_balance se define como un puente que conecta todos los servicios.
+
+¿Cómo desplegar y construir con Docker Compose?
+La magia de Docker Compose reside en su simplicidad para construir y desplegar contenedores. Con un simple comando, podemos gestionar toda la infraestructura necesaria.
+
+Construcción de imágenes
+Usamos el siguiente comando para construir las imágenes de nuestros contenedores antes de desplegarlas. Esto asegura que todo esté listo y optimizado para el despliegue.
+
+$ docker-compose build
+Despliegue de servicios
+Luego de construir las imágenes, podemos desplegar los servicios con un simple comando. El entorno de ejecución se prepara instantáneamente sin necesidad de configuraciones adicionales.
+
+$ docker-compose up
+Con esta acción, todos los contenedores definidos en el archivo se iniciarán, y podrás accesarlos, por ejemplo, navegando a http://localhost:8080.
+
+¿Por qué utilizar Docker Compose?
+Docker Compose elimina la necesidad de ejecutar múltiples comandos en la terminal al gestionar contenedores. Toda la configuración queda contenida en un archivo y puede ser desplegada con poco esfuerzo. A través de un archivo .yaml, ofrece control exhaustivo sobre qué se desplegará y cómo se hará, permitiéndonos personalizar cada aspecto del entorno de ejecución.
+
+En conclusión, Docker Compose es una herramienta poderosa para cualquier desarrollador que trabaje con contenedores. Facilita el manejo de ambientes complejos, fomenta la reutilización de configuraciones, y allana el camino hacia una orquestación contingente de microservicios. Despliega, ajusta y prueba en cuestión de segundos, y verás cómo tu flujo de trabajo se simplifica continuamente.
+
+Practica:
+https://github.com/platzi/docker-avanzado/tree/main/Compose
+
+
+
+###################################################################################################################
+Secciones en un archivo Docker Compose
+###################################################################################################################
+¿Cómo estructurar un archivo YAML de Docker Compose?
+Entender la estructura de un archivo Docker Compose YAML es fundamental para administrar múltiples contenedores de manera eficaz. Este archivo no solo facilita la ejecución de servicios sino que también ofrece una organización más visual para gestionar diversos procesos de red y almacenamiento. Continúa leyendo para conocer en detalle los componentes esenciales y cómo configurarlos correctamente.
+
+¿Qué elementos integrar en un archivo Docker Compose?
+Versión: Especificar la versión del archivo es uno de los primeros pasos. Aunque es opcional en las versiones más recientes (como la 3.8), definirla puede ayudar a mantener compatibilidad con futuros cambios.
+
+version: '3.8'
+
+Servicios: Aquí defines los distintos servicios que tu aplicación necesita. Cada servicio contiene configuraciones esenciales como la imagen Docker, los puertos, los volúmenes y las variables de ambiente.
+
+services: web: image: nginx ports: - "80:80" volumes: - webdata:/var/www/html
+
+Puertos: Los puertos configuran la comunicación entre el host y el contenedor, facilitando el acceso a diferentes servicios y aplicaciones dentro de tu red.
+
+Volúmenes: Utilizados para persistir datos, los volúmenes permiten mantener la información intacta incluso si el contenedor se detiene o se recrea.
+
+volumes: webdata:
+
+¿Cuáles son los beneficios de configurar dependencias en servicios?
+La sección depends_on garantiza que ciertos servicios no se ejecuten hasta que otros, de los cuales dependen, estén completamente operativos. Esto asegura un orden lógico en el despliegue de las aplicaciones y evita errores al iniciar módulos que requieren otros servicios previos.
+
+services:
+  web:
+    depends_on:
+      - app
+  app:
+    image: app_image
+¿Cómo se configuran redes y volúmenes?
+Usar redes personalizadas en Docker Compose puede facilitar la interacción segura entre tus contenedores, a la vez que define reglas específicas de acceso.
+
+Redes: Permiten definir configuraciones detalladas para los contenedores, influyendo en la interacción de red entre ellos.
+
+networks: my_network: driver: bridge
+
+Configuración de volúmenes: Los volúmenes pueden ser locales o se pueden crear para compartir entre múltiples servicios, ya sea que provengan de imágenes públicas o personalizadas.
+
+volumes: dbdata:
+
+¿Cuáles son las buenas prácticas para mantener un archivo Docker Compose?
+Esencialmente, mantener un archivo organizado con comentarios y asegurarse de la correcta indentación fortalecerá su claridad y mantenimiento. Tener una plantilla/lista impresa o digital del esquema del archivo puede ser un recurso útil para futuras configuraciones.
+
+Al trabajar en proyectos, te recomiendo mantener una copia de referencia de este tipo de archivo para facilitar la configuración de una gran cantidad de contenedores sin mayores complicaciones. Esto no solo optimiza tu flujo de trabajo, sino que también te ahorrará tiempo y esfuerzo a largo plazo en el despliegue de aplicaciones con Docker Compose.
+
+Practica:
+https://github.com/platzi/docker-avanzado/tree/main/Compose
+
+
+###################################################################################################################
+Agregando volúmenes con Docker Compose
+###################################################################################################################
+¿Qué es Docker y cómo los volúmenes solucionan problemas de persistencia de datos?
+Docker es una herramienta poderosa que permite a los desarrolladores empaquetar aplicaciones y sus dependencias en contenedores, asegurando que se ejecuten de manera uniforme en cualquier entorno. Sin embargo, uno de los desafíos más significativos cuando se empieza a usar Docker es la persistencia de datos. Al detener un contenedor, los datos almacenados se pierden. Aquí es donde los volúmenes de Docker ofrecen una solución crucial, proporcionando una forma de almacenar datos de manera persistente.
+
+¿Cuántos tipos de volúmenes existen en Docker?
+En Docker, esencialmente hay dos tipos de volúmenes que facilitan la gestión de datos:
+
+Volúmenes de tipo Bind: Funcionan como un enlace directo entre una carpeta del sistema anfitrión y una del contenedor.
+Volúmenes nombrados: Administrados completamente por Docker, no requieren un path específico en el sistema de archivos del anfitrión.
+¿Cómo configurar volúmenes de tipo Bind en Docker Compose?
+La configuración de un volumen de tipo Bind se puede realizar fácilmente utilizando un archivo Docker Compose. Aquí te muestro un ejemplo de cómo hacerlo:
+
+version: '3'
+services:
+  web:
+    image: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./html:/usr/share/nginx/html
+En este setup, la carpeta html del sistema anfitrión se enlaza con /usr/share/nginx/html en el contenedor. De este modo, cualquier cambio realizado en la carpeta html local se reflejará automáticamente en el contenedor.
+
+¿Cómo podemos implementar volúmenes nombrados para una base de datos?
+La implementación de volúmenes nombrados es óptima cuando necesitas asegurarte de que los datos persistan incluso cuando un contenedor específico se apaga. Aquí tienes un ejemplo con MySQL:
+
+version: '3'
+services:
+  db:
+    image: mysql
+    volumes:
+      - dbdata:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+
+volumes:
+  dbdata:
+En este caso, dbdata es un volumen nombrado que almacena los datos de la base de datos MySQL en el directorio /var/lib/mysql.
+
+¿Cómo monitorear y gestionar los volúmenes?
+Docker facilita el monitoreo y la gestión de volúmenes, tanto desde la terminal como desde Docker Desktop, lo que proporciona opciones visuales para una administración más sencilla:
+
+Terminal: Puedes utilizar comandos como docker volume ls para listar los volúmenes disponibles y docker volume inspect [VOLUME_NAME] para inspeccionar un volumen específico.
+
+Docker Desktop: Ofrece una interfaz gráfica donde puedes ver directamente los volúmenes en uso y la información almacenada en ellos.
+
+Trabajar con volúmenes en Docker simplifica enormemente el flujo de desarrollo, permitiéndote mantener la integridad de los datos y aumentar la eficiencia en la gestión de aplicaciones contenedorizadas. Los volúmenes enlazados, además, facilitan el desarrollo web en entorno local, permitiéndote hacer cambios en tiempo real sin necesidad de recompilar la imagen.
+
+Practica:
+https://github.com/platzi/docker-avanzado/tree/main/Volumenes
+
+
+###################################################################################################################
+Secuencia de apagado
+###################################################################################################################
+¿Qué descubrí sobre Docker Compose?
+Explorando Docker Compose, descubrí un aspecto vital sobre la secuencia de apagado que brinda una forma eficiente de gestionar los recursos de tu computadora. Aunque este detalle ha estado presente desde el inicio, al encontrarlo accidentalmente, su utilidad se destacó: permite ahorrar recursos significativamente. A continuación, te mostraré cómo implementar esta característica.
+
+¿Cómo configurar Docker Compose?
+Para comenzar, necesitamos crear una estructura básica de carpetas y archivos. Estos pasos te ayudarán a seguir el proceso de manera adecuada:
+
+Crear carpetas:
+Una carpeta principal llamada apagado.
+Una subcarpeta llamada frontend o sitio_web. El nombre no es crucial, pero es importante recordar su ubicación.
+Crear un Dockerfile:
+Dentro de la carpeta frontend, crea un archivo llamado Dockerfile.
+Este archivo debe simular un pequeño servidor web con Nginx y contener un archivo HTML para simular un servidor web.
+Archivo docker-compose.yml:
+Crea un archivo docker-compose.yml en la carpeta apagado.
+
+Define tres servicios:
+
+Web Service: Usa una imagen de Nginx y depende del servicio app.
+App Service: Desplegado con la carpeta frontend.
+DB Service: Un servicio simple de base de datos.
+version: '3' services: db: image: your_db_image
+
+app: build: ./frontend depends_on: - db
+
+web: image: nginx depends_on: - app
+
+Estos elementos configuran el orden de inicio: DB primero, después App, y por último Web, según sus dependencias.
+
+¿Cómo manejar el apagado de Docker Compose?
+Al ejecutar docker-compose up, notarás que los servicios se inician en el orden especificado. Sin embargo, al detener la aplicación con Ctrl + C, los servicios se apagan en orden inverso: comenzando por Web. Este enfoque en cadena asegura que cada servicio dependiente tenga un cierre ordenado antes de su predecesor.
+
+Ahora, es crucial entender la diferencia entre simplemente usar Ctrl + C y docker-compose down:
+
+Ctrl + C:
+Detiene la aplicación, pero los contenedores y redes aún persisten. Esto puede consumir recursos innecesarios si olvidamos eliminarlos después.
+Docker Compose Down:
+Este comando limpia completamente los contenedores, las redes y cualquier otro recurso. Con docker-compose down, garantizas que Docker Desktop o cualquier entorno de Docker esté realmente limpio, liberando recursos de tus máquinas virtuales de manera eficiente.
+Usar docker-compose down requiere más esfuerzo, ya que debes abrir una nueva terminal y posicionarte exactamente en la misma ubicación del proyecto antes de ejecutar el comando. No obstante, los beneficios son notables en la gestión de recursos.
+
+¿Por qué es importante este proceso en el entorno local?
+Implementar este método de apagado optimiza tu entorno de desarrollo local. Aquí algunos beneficios:
+
+Optimización de recursos: Al liberar recursos al cerrar correctamente tus servicios.
+Mantenimiento limpio: La limpieza completa evita que los contenedores y redes queden pendientes, lo que podría causar conflictos en futuros despliegues.
+Eficiencia en el desarrollo: Te permite concentrarte en el desarrollo, sin preocuparte por limpiar manualmente los recursos.
+En resumen, comprender y aplicar estas tácticas no solo optimiza el uso de Docker Compose, sino que también refuerza el buen manejo de los entornos de desarrollo, ahorrando tiempo y esfuerzo técnico.
+
+Practica:
+https://github.com/platzi/docker-avanzado/tree/main/Apagado
+
+
+###################################################################################################################
+Introducción a Docker Swarm
+###################################################################################################################
+¿Qué es un orquestador de contenedores?
+En el mundo de la administración de sistemas, los orquestadores de contenedores han revolucionado la manera en que desplegamos y gestionamos aplicaciones. Estos poderosos aliados automáticos se encargan de gestionar la red, volúmenes y despliegue de contenedores, liberándote de una gran carga de tareas rutinarias. Entre ellos, Kubernetes destaca como el líder indiscutible, aunque su complejidad puede ser intimidante para quienes inician en este campo. Por suerte, Docker Swarm ofrece una alternativa más accesible para adentrarse en esta tecnología.
+
+¿Cómo iniciar con Docker Swarm?
+Docker Swarm es el orquestador de contenedores por defecto de Docker y es ideal para dar los primeros pasos en orquestación. Comenzar a trabajar con él es sorprendentemente sencillo y rápido.
+
+Iniciando Docker Swarm
+Para inicializar Docker Swarm, simplemente abre tu terminal y escribe el siguiente comando:
+
+docker swarm init
+Este sencillo paso establece el entorno necesario para que Docker Swarm gestione tus contenedores.
+
+Creando servicios con Docker Swarm
+El manejo de servicios es fundamental al utilizar Docker Swarm. La creación de servicios te permite desplegar contenedores de forma controlada y replicada. Aquí te muestro cómo hacerlo:
+
+Para crear un servicio llamado "web" con tres réplicas de la imagen nginx, utiliza el siguiente comando:
+
+docker service create --name web --replicas 3 -p 8080:80 nginx
+
+La opción -p 8080:80 indica que el puerto 8080 del host se mapeará al puerto 80 del contenedor.
+
+Para un servicio llamado "API" con cinco réplicas, usa este comando:
+
+docker service create --name api --replicas 5 -p 8081:80 username/minimal-api
+
+Recuerda ajustar los puertos si tienes conflictos.
+
+Monitoreando y gestionando servicios
+Una vez creados, es crucial monitorear el estado de los servicios desplegados. Docker Swarm proporciona comandos para este propósito:
+
+Para listar los servicios actuales:
+
+docker service ls
+
+Esto permite conocer qué servicios están activos y cuántas réplicas se están ejecutando.
+
+Para obtener detalles de un servicio específico como "API":
+
+docker service ps api
+
+Este comando muestra el estado de las réplicas, identificándolas por nombres secuenciales como api.1, api.2, etc.
+
+Escalar servicios en Docker Swarm
+Si necesitas aumentar el poder de procesamiento de tu servicio "web", puedes aumentar el número de réplicas sin interrumpir el servicio:
+
+docker service scale web=5
+Docker Swarm automáticamente ajustará el número de contenedores a cinco réplicas.
+
+Eliminando servicios y limpiando el entorno
+Cuando ya no necesitas un servicio, Docker Swarm facilita su eliminación:
+
+Para eliminar el servicio "web":
+
+docker service rm web
+
+Para quitar todos los servicios y salir del modo Swarm, emplea:
+
+docker swarm leave --force
+Esto asegura que tus nodos abandonen el Swarm, dejando tu entorno limpio y listo para nuevos proyectos.
+
+En resumen, Docker Swarm te permite gestionar de manera efectiva y eficiente tus contenedores mientras experimentas y aprendes los fundamentos de la orquestación.
+
+
+###################################################################################################################
+Replicación de Stacks con Docker Compose
+###################################################################################################################
+¿Cómo iniciar con Docker Swarm y Docker Compose?
+Comenzar con Docker Swarm y Docker Compose puede parecer intimidante, pero una vez que entiendes los fundamentos, los beneficios son claros. Docker Swarm te ofrece una solución ligera para orquestar contenedores, mientras que Docker Compose facilita la gestión de servicios. Un excelente punto de partida es aprender a combinar estas tecnologías para maximizar sus capacidades en el desarrollo de aplicaciones.
+
+¿Cómo configuro mi ambiente?
+El primer paso es preparar el ambiente de trabajo creando la estructura de carpetas adecuada y asegurándote de tener las imágenes necesarias.
+
+Crea una carpeta llamada stacks: Esta será la raíz de tu proyecto.
+
+Dentro de stacks, crea una subcarpeta llamada app: Aquí almacenaremos el Dockerfile que especifica el servidor Nginx.
+
+mkdir stacks cd stacks mkdir app
+
+Para completar esta configuración básica, genera la imagen Docker desde el Dockerfile utilizando el siguiente comando:
+
+docker build -t frontend ./app
+Esto creará una imagen etiquetada como frontend. Asegúrate de que la imagen se haya creado correctamente usando docker images.
+
+¿Qué implica el archivo docker-compose.yaml?
+El archivo docker-compose.yaml es fundamental para definir y gestionar los servicios que deseas ejecutar. En este archivo, especificarás detalles como el despliegue de servicios y las configuraciones de red. Aquí es donde Docker Compose y Swarm muestran su verdadera sinergia.
+
+Servicios y redes
+Dentro del archivo YAML, se define cada servicio que deseas desplegar. Es crucial destacar que, cuando usas Docker Swarm, trabajas directamente con imágenes, no con Dockerfile.
+
+Ejemplo de configuración básica de servicios:
+
+services:
+  frontend:
+    image: frontend:latest
+    deploy:
+      replicas: 3
+      update_config:
+        parallelism: 2
+        delay: 10s
+    networks:
+      - frontend-net
+
+networks:
+  frontend-net:
+    driver: overlay
+Claves del archivo YAML:
+
+deploy: Gestiona las réplicas y las políticas de clonación.
+Redes overlay: Esencial para la comunicación entre servicios en Docker Swarm.
+¿Cómo implemento y gestiono los servicios?
+Una vez configurado el archivo YAML, es momento de desplegar los servicios.
+
+Depliega los servicios usando Docker Stack:
+
+docker stack deploy -c docker-compose.yml my_deployment
+
+Gestión de servicios en Docker Desktop
+Ahora que los servicios están desplegados, puedes gestionarlos desde Docker Desktop. Aquí puedes monitorear los servicios, detener contenedores, y ver Docker Swarm en acción.
+
+Detención manual de contenedores: Puedes pausar o eliminar contenedores para ver cómo Docker Swarm maneja las fallas creando nuevas instancias automáticamente. Esta característica automatizada asegura que el servicio siempre esté disponible.
+Eliminación y limpieza de servicios
+Finalmente, para detener y limpiar todos los servicios y redes:
+
+docker stack rm my_deployment
+docker swarm leave --force
+Esto eliminará todos los rastros de la implementación.
+
+Consideraciones finales: ¿Cuándo usar Docker Swarm?
+Docker Swarm es ideal para proyectos pequeños o medianos debido a ciertas limitaciones, como el soporte máximo de 100 contenedores. Sin embargo, es un excelente punto de entrada antes de escalar a soluciones más robustas como Kubernetes.
+
+Con esta práctica integración de Docker Swarm y Compose, puedes gestionar contenedores eficiente y eficazmente, proporcionando flexibilidad y resiliencia a tu entorno de desarrollo.
+
+Practica:
+https://github.com/platzi/docker-avanzado/tree/main/Stacks
+
+
+###################################################################################################################
+De Docker a la nube
+###################################################################################################################
+¿Por qué es conveniente utilizar un proveedor de nube para la orquestación de contenedores?
+Iniciar con la orquestación de contenedores en un equipo local es útil, pero limita las posibilidades cuando se trata de pruebas más exigentes o incluso de producción. Para superar estas limitaciones, recurrir a un proveedor de nube es altamente ventajoso. Cada proveedor ofrece múltiples opciones para trabajar con estas operaciones, ya sea en modo serverless, orquestador de contenedores o contenedores aislados, permitiendo adaptarse a los distintos escenarios requeridos.
+
+¿Qué opciones ofrecen AWS, Google Cloud y Azure?
+Amazon Web Services (AWS): Las herramientas destacadas son Amazon Elastic Container Services y Amazon Elastic Kubernetes Service, permitiendo una orquestación flexible.
+Google Cloud: Ofrece Google Kubernetes Service y Google Run, que facilitan despliegues eficientes de contenedores.
+Microsoft Azure: Proporciona Azure Kubernetes Services, Azure Container Apps y Azure WebApps, brindando soluciones robustas para la gestión de contenedores.
+Seleccionar la adecuada dependerá de las características de cada proyecto, teniendo en mente siempre el balance entre inversión de tiempo y costos.
+
+¿Cómo monitorizar los costos en la nube?
+El despliegue sin control de contenedores puede resultar costoso debido a la infraestructura implicada. Es vital monitorear continuamente los gastos asociados para asegurarse de que la solución de nube esté beneficiando al negocio.
+
+¿Cómo supervisar costos en Azure?
+Por ejemplo, en Microsoft Azure, puedes observar cómo se registran los costos de los recursos utilizados. Al crear servicios como Container Apps Environment o App Service Plan dentro de un grupo de recursos, se genera un costo, incluso si no se están utilizando activamente. Accediendo al portal de Azure, puedes visualizar estos costos:
+
+Seleccionando la suscripción: Accede a tu cuenta y revisa los costes según el grupo de recursos o por solución.
+Revisiones detalladas: Ve hacia la sección de reportes de costos y despliega las opciones para analizar los gastos de cada recurso.
+Análisis continuo: Esto permite ser preciso en conocer dónde se están generando costos y planear mejor el presupuesto.
+¿Por qué es crucial el monitoreo?
+Monitorear y trabajar conjuntamente con el administrador de la cuenta asegura que los gastos de despliegue se mantengan en control, evitando exceder el presupuesto y permitiendo un uso eficiente de los recursos en la nube. Además, fomenta una colaboración más cercana con áreas financieras y de IT dentro de la organización para la gestión efectiva de la infraestructura en la nube.
+
+
+###################################################################################################################
+Orquestadores de contenedores
+###################################################################################################################
+¿Cómo habilitar Kubernetes en Docker Desktop?
+A medida que avanzas en el mundo de la virtualización y el despliegue de contenedores, te puede interesar llevar tus experimentos al siguiente nivel explorando Kubernetes. Aunque Kubernetes es una herramienta poderosa y compleja que soporta miles de nodos, puedes empezar en pequeño ejecutándolo localmente en un solo nodo a través de Docker Desktop. Aquí te mostraremos cómo hacerlo de manera fácil y rápida, sin necesidad de configuraciones complejas ni instalaciones adicionales.
+
+¿Cuál es el primer paso para habilitar Kubernetes?
+Lo primero que necesitas hacer en Docker Desktop es acceder al menú de configuración. Aquí, encontrarás una sección llamada "Kubernetes", donde simplemente debes habilitar la característica. Una vez activada, se desbloquearán las opciones para aplicar cambios y reiniciar Docker Desktop. Este proceso puede llevar un tiempo, así que es una buena oportunidad para preparar el resto de las herramientas necesarias.
+
+¿Cómo instalar la herramienta CubeCuttl (kubectl)?
+Parallelamente a la configuración de Docker Desktop, puedes avanzar instalando kubectl, la CLI que te permitirá interactuar con el clúster de Kubernetes. Sigue estos pasos para instalarla:
+
+Instalar la herramienta: Descarga kubectl en tu entorno local mediante el comando que se encuentra en los recursos de tu clase.
+Asignar privilegios de ejecución: Asegúrate de darle permisos de ejecución, ya que kubectl se trata de una herramienta de línea de comandos.
+Mover la herramienta: Copia kubectl a una ubicación accesible desde cualquier terminal.
+Verificar la versión: Ejecuta kubectl version --client para confirmar la instalación.
+¿Cómo configurar Docker Desktop con kubectl?
+Una vez Docker Desktop ha completado la instalación de Kubernetes, es crucial que kubectl sepa cómo comunicarse con este clúster. Aunque suele configurarse automáticamente, es útil saber cómo hacerlo manualmente si es necesario.
+
+Ejecuta el comando kubectl config get-contexts para verificar los contextos disponibles. Idealmente, se debería listar Docker Desktop como contexto activo.
+Si no aparece, puedes establecerlo manualmente con kubectl config use-context docker-desktop.
+¿Cómo comprobar que Kubernetes está corriendo correctamente?
+Para confirmar que todo está funcionando:
+
+Usa el comando kubectl get nodes para listar los nodos en tu clúster de Kubernetes. Deberías ver un único nodo activo, que es lo esperado cuando trabajas localmente.
+Con estos pasos, ya tendrás Kubernetes operativo en tu entorno local a través de Docker Desktop, listo para empezar a desplegar contenedores. Recuerda que este setup está limitado por el hardware de tu equipo, pero es un excelente punto de partida para familiarizarte con Kubernetes y comenzar a explorar sus capacidades.
+
+
+###################################################################################################################
+Costos de Docker
+###################################################################################################################
+¿Cuáles son los límites del plan personal de Docker?
+En el amplio mundo del desarrollo de software y despliegue de servicios, Docker se ha convertido en una herramienta esencial. Sin embargo, es fundamental entender los límites y características de los diferentes planes ofrecidos por Docker para evitar sorpresas desagradables, especialmente en entornos productivos.
+
+El plan personal de Docker, que muchos desarrolladores utilizan para prácticas y proyectos personales, tiene ciertas restricciones:
+
+Pulls limitados: El plan personal permite realizar hasta 200 pulls (descargas) de imágenes desde Docker Hub cada seis horas. Este límite no solo aplica al dueño de las imágenes, sino a cualquier usuario que interactúe con ellas.
+Repositorios protegidos: Solo se pueden tener hasta tres repositorios protegidos utilizando la herramienta de escaneo de imágenes, lo que puede ser insuficiente si manejas un volumen considerable de proyectos.
+Análisis local: Si bien es posible realizar análisis locales de las imágenes, esto no es viable para todas las imágenes ni todo el tiempo.
+Es crucial evaluar estas limitaciones al pasar de un uso de aprendizaje a un entorno más profesional.
+
+¿Qué beneficios ofrecen los planes pagados de Docker?
+Dar el salto a un plan pagado de Docker puede ofrecer una serie de ventajas que potencian la eficiencia y escalabilidad de tus proyectos. Aunque requiere una inversión, las mejoras operativas pueden valer cada centavo.
+
+Más pulls permitidos: Los planes pagados amplían enormemente el número de pulls, permitiendo hasta 5,000 por día, lo cual es significativo para entornos colaborativos o de alta demanda.
+Repositorios privados: Acceso a repositorios privados directamente en Docker Hub, evitando la necesidad de crear registros en la nube externa.
+Builds concurrentes: La capacidad de crear builds concurrentes, permitiendo que múltiples imágenes se desplieguen o construyan simultáneamente sin problemas.
+Precios accesibles: Los planes comienzan desde $5 al mes, un costo fácilmente justificable frente a los beneficios obtenidos.
+El plan de equipos, por ejemplo, incrementa a $9 por usuario al mes y el plan de negocio a $24, ofreciendo características adicionales adaptadas a las necesidades de empresas de diferentes tamaños.
+
+¿Por qué tener en cuenta las políticas de uso comercial de Docker?
+Cuando se trata de usar Docker en un entorno empresarial, es imprescindible estar al tanto de las políticas de uso comercial para evitar infracciones de licencias que podrían acarrear graves consecuencias legales. Docker establece ciertas regulaciones para compañías con más de 250 empleados o aquellas que facturen más de diez millones, las cuales requieren atención personalizada.
+
+Casos relevantes de uso empresarial:
+Atención a términos de uso: Las empresas deben estar al tanto de los términos de uso y renovaciones de contratos. A modo de ejemplo, Microsoft equipara su uso de Docker en proyectos mediante suscripciones adecuadas, asegurando conformidad con las políticas.
+Planificación financiera y estratégica: Evaluar costes y términos específicos de uso garantiza una planificación estratégica efectiva, permitiendo a las empresas evitar riesgos y usar Docker plenamente en sus capacidades.
+Docker facilita diversas maneras de desplegar servicios, ofreciendo oportunidades casi ilimitadas para proyectos de todo tipo. Sin embargo, cada empresa debe asegurarse de seleccionar el plan correcto y seguir alineada a sus políticas para maximizar los beneficios y minimizar los riesgos asociados.
+
+
+###################################################################################################################
+Introducción a los devcontainers
+###################################################################################################################
+¿Cómo ayudan los dev containers a la consistencia del entorno de desarrollo?
+El uso de Docker ha revolucionado la forma en la que los desarrolladores crean, prueban y despliegan aplicaciones. Introducirse en la ciberseguridad a través de prácticas controladas o crear contenedores de desarrollo estandarizados son formas innovadoras de utilizar esta potente herramienta. Pero, ¿cómo aseguran los dev containers la homogeneidad en los ambientes de desarrollo y eliminan las incómodas discrepancias de versiones entre equipos?
+
+Homologación de tecnología: Los dev containers permiten estandarizar todas las tecnologías que un proyecto utiliza. Por ejemplo, si tu equipo está trabajando con Node.js, los dev containers aseguran que todos los miembros estén en la misma versión, eliminando errores de compatibilidad.
+Integración de extensiones: Facilitan la integración y configuración de extensiones, de modo que cada desarrollador opere con las mismas herramientas y plugins, mejorando la eficiencia del trabajo en equipo.
+¿Cómo se configura un dev container en Visual Studio Code?
+Configurar un dev container en Visual Studio Code es un proceso sencillo que puede marcar la diferencia en cómo gestionas tus entornos de desarrollo. Aquí te explicamos paso a paso cómo hacerlo.
+
+Creación del entorno de trabajo:
+Desde Visual Studio Code, crea una carpeta exclusiva para tu proyecto llamada devcontainer y abre el editor en esta carpeta.
+Archivo de configuración:
+Crea un archivo como app.js e inicializa una pequeña aplicación Node.js.
+Iniciar el dev container:
+Utiliza el comando Control + Shift + P para abrir el menú de opciones, y selecciona "Agregar un dev container" o busca "dev containés".
+
+Escoge la configuración sugerida de Node y TypeScript. La versión recomendada es la 22.
+
+// Ejemplo de archivo devcontainer.json { "name": "Node.js & TypeScript", "extensions": [ "dbaeumer.vscode-eslint", "ms-vscode.vscode-typescript-tslint-plugin" ], "features": { "node": "latest" } }
+
+¿Por qué usar dev containers mejora tu flujo de trabajo?
+La implementación de dev containers te ofrece una experiencia de desarrollo mucho más simplificada y coherente. Visual Studio Code, al reconocer la configuración del contenedor, gestiona automáticamente las instalaciones necesarias sin que intervengas manualmente, facilitando el trabajo colaborativo.
+
+Tiempo optimizado: VS Code se encarga de construir y gestionar el entorno de acuerdo con el archivo devcontainer.json, ahorrando tiempo que anteriormente se dedicaría a configuraciones manuales.
+Reutilización de configuraciones: Clonar un repositorio de GitHub que ya cuente con un dev container te permite saltar directamente a la fase de desarrollo, dejando atrás la tediosa etapa de instalación y ajuste.
+Con esta herramienta, puedes garantizar una interoperabilidad fluida entre todos los miembros de tu equipo y asegurar que cualquier nuevo desarrollador pueda integrarse rápida y efectivamente en el proyecto sin enfrentar problemas de configuración o compatibilidad.
+
+Un paso más hacia la eficiencia en el desarrollo
+Adoptar dev containers no solo resuelve problemas comunes de infraestructura, sino que también facilita el enfoque en lo primordial: el aprendizaje y la creación. Al promover una experiencia uniforme, aumentas la calidad del trabajo y fomentas un ambiente de colaboración más eficiente y agradable. Estoy aquí para animarte a seguir aprendiendo y mejorando tus habilidades de desarrollo.
+
+Fin!!!...
