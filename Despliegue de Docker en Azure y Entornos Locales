@@ -1,0 +1,41 @@
+¿Cómo llevar una imagen Docker optimizada a la nube con Microsoft Azure?
+En el mundo del desarrollo y despliegue de aplicaciones, manejar eficientemente imágenes Docker es crucial para asegurar un flujo de trabajo fluido y sin complicaciones. Ya dominamos el arte de crear la imagen perfecta, optimizada y lista para producción. Es momento de darle el honor de surcar los cielos y llevarla a la nube. En esta guía te mostraré cómo hacerlo con Microsoft Azure, aunque el proceso es bastante similar en otros proveedores como AWS o Google Cloud.
+
+¿Qué necesita nuestra imagen Docker antes de subir a la nube?
+Antes de sumergirnos en los pasos técnicos, es importante entender que:
+
+Contenedor o registro privado: No utilizaremos un repositorio público como Docker Hub. En su lugar, configuraremos un registro de contenedores privado.
+Preparación de la imagen: Asegúrate de que tu imagen Docker esté optimizada. Esto no solo mejorará el rendimiento, sino que también reducirá costos al disminuir el tamaño de la imagen.
+¿Cómo crear un Container Registry en Azure?
+Comenzaremos creando un Container Registry en Azure, fundamental para el alojamiento y manejo de imágenes Docker.
+
+Accede al portal de Azure.
+Crea un grupo de recursos: Imagina esto como un espacio de trabajo donde alojarás toda la infraestructura necesaria para tu proyecto.
+Selecciona "Create" y escribe "Container Registry" en la barra de búsqueda.
+Nombra tu registro: Asegúrate que el nombre es único. En este caso, usamos "Platzi Registry".
+Configura la ubicación: Usualmente se elige una región cercana, como el este de Estados Unidos.
+Elige el plan estándar: Se sugiere este plan para la mayoría de las aplicaciones.
+Crea el registro y espera unos minutos a que se despliegue completamente.
+¿Cómo subir una imagen Docker a Azure Container Registry?
+Ahora subiremos nuestra imagen Docker desde un entorno local al registro que acabamos de crear:
+
+Inicia sesión en Azure desde la terminal:
+
+AZ ACR login -n NombreDelRegistry
+
+Este comando autentica la terminal con el registro de contenedores.
+
+Crea la imagen en tu entorno local:
+
+cd front-end docker build -t NombreDelRegistry.azurecr.io/sitio-web:latest .
+
+Empuja la imagen al registro de Azure:
+
+docker push NombreDelRegistry.azurecr.io/sitio-web:latest
+
+¿Cómo verificar la carga en Azure Container Registry?
+Regresa al portal de Azure y ve a la sección de "Repositorios" dentro de tu Container Registry.
+
+Encuentra tu imagen bajo el nombre "sitio web".
+Aquí puedes visualizar la fecha y otros detalles, como los tags (versiones). Esto es vital para manejar diferentes versiones de la misma imagen sin problemas.
+Con estos sencillos pasos, hemos gestionado de manera eficiente nuestras imágenes Docker, asegurándonos de que estén seguras y listas para ser utilizadas en cualquier herramienta de implementación que Azure ofrece. ¡Adelante, y sigue explorando el vasto mundo del despliegue en la nube!
