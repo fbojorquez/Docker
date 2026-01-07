@@ -1,0 +1,11 @@
+# Docker
+*.log
+.docker/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
